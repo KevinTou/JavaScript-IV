@@ -64,7 +64,8 @@ class Instructor extends Person {
     if (positiveOrNegative === 0) {
       randomInt = randomInt * -1;
     }
-    return student.grade + randomInt;
+    student.grade = student.grade + randomInt;
+    return student.grade;
   }
 }
 
