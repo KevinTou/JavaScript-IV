@@ -18,11 +18,17 @@ class Person {
   }
 }
 
+// Person Object creation/invocations
 const drSeuss = new Person({
   name: "Dr. Seuss",
   age: 999,
   location: "Whoville"
 });
+
+console.log("name: ", drSeuss.name);
+console.log("age: ", drSeuss.age);
+console.log("location: ", drSeuss.location);
+console.log("speak(): ", drSeuss.speak());
 
 const willyWonka = new Person({
   name: "Willy Wonka",
@@ -30,11 +36,21 @@ const willyWonka = new Person({
   location: "the Chocolate Factory"
 });
 
+console.log("name: ", willyWonka.name);
+console.log("age: ", willyWonka.age);
+console.log("location: ", willyWonka.location);
+console.log("speak(): ", willyWonka.speak());
+
 const doug = new Person({
   name: "Doug",
   age: 12,
   location: "Bluffington"
 });
+
+console.log("name: ", doug.name);
+console.log("age: ", doug.age);
+console.log("location: ", doug.location);
+console.log("speak(): ", doug.speak());
 
 /*
 
@@ -69,6 +85,7 @@ class Instructor extends Person {
   }
 }
 
+// Instructor Object creation/invocations
 const dan = new Instructor({
   name: "Dan",
   age: Infinity,
@@ -79,6 +96,13 @@ const dan = new Instructor({
   catchPhrase: "If you can do the thing, you can get paid to do the thing!"
 });
 
+// console.log("specialty: ", dan.specialty);
+// console.log("favLanguage: ", dan.favLanguage);
+// console.log("catchPhrase: ", dan.catchPhrase);
+// console.log("demo(): ", dan.demo("Javascript"));
+// console.log(".grade(): ", dan.grade(kevin, "Javascript")); // Won't work unless you put them before student object creation
+// console.log("modifyGrade(): ", dan.modifyGrade(kevin)); // Won't work unless you put them before student object creation
+
 const yoda = new Instructor({
   name: "Yoda",
   age: 900,
@@ -87,6 +111,13 @@ const yoda = new Instructor({
   favLanguage: "Unknown",
   catchPhrase: "May the force be with you!"
 });
+
+// console.log("specialty: ", yoda.specialty);
+// console.log("favLanguage: ", yoda.favLanguage);
+// console.log("catchPhrase: ", yoda.catchPhrase);
+// console.log("demo(): ", yoda.demo("Javascript"));
+// console.log(".grade(): ", yoda.grade(kevin, "Javascript")); // Won't work unless you put them before student object creation
+// console.log("modifyGrade(): ", yoda.modifyGrade(kevin)); // Won't work unless you put them before student object creation
 
 const miyagi = new Instructor({
   name: "Mr. Miyagi",
@@ -97,6 +128,13 @@ const miyagi = new Instructor({
   catchPhrase:
     "No such thing as bad student, only bad teacher. Teacher say, student do."
 });
+
+// console.log("specialty: ", miyagi.specialty);
+// console.log("favLanguage: ", miyagi.favLanguage);
+// console.log("catchPhrase: ", miyagi.catchPhrase);
+// console.log("demo(): ", miyagi.demo("Javascript"));
+// console.log(".grade(): ", miyagi.grade(kevin, "Javascript")); // Won't work unless you put them before student object creation
+// console.log("modifyGrade(): ", miyagi.modifyGrade(kevin)); // Won't work unless you put them before student object creation
 
 /*
 
@@ -136,6 +174,7 @@ class Student extends Person {
   }
 }
 
+// Student Object creation/invocations
 const kevin = new Student({
   name: "Kevin",
   age: 28,
@@ -146,14 +185,35 @@ const kevin = new Student({
   grade: 50
 });
 
+console.log("previousBackground: ", kevin.previousBackground);
+console.log("className: ", kevin.className);
+console.log("favSubjects: ", kevin.favSubjects);
+console.log("grade: ", kevin.grade);
+console.log("listsSubjects(): ");
+kevin.listsSubjects();
+console.log("PRAssignment(): ", kevin.PRAssignment("Javascript IV"));
+console.log("sprintChallenge(): ", kevin.sprintChallenge("Javascript"));
+console.log("graduate(): ", kevin.graduate());
+
 const isaiah = new Student({
   name: "Isaiah",
   age: 18,
   location: "Florida",
   previousBackground: "High School last month",
   className: "Web21",
-  favSubjects: ["Html", "CSS", "JavaScript"]
+  favSubjects: ["Html", "CSS", "JavaScript"],
+  grade: 90
 });
+
+console.log("previousBackground: ", isaiah.previousBackground);
+console.log("className: ", isaiah.className);
+console.log("favSubjects: ", isaiah.favSubjects);
+console.log("grade: ", isaiah.grade);
+console.log("listsSubjects(): ");
+isaiah.listsSubjects();
+console.log("PRAssignment(): ", isaiah.PRAssignment("Javascript IV"));
+console.log("sprintChallenge(): ", isaiah.sprintChallenge("Javascript"));
+console.log("graduate(): ", isaiah.graduate());
 
 const joscelyn = new Student({
   name: "Joscelyn",
@@ -161,8 +221,19 @@ const joscelyn = new Student({
   location: "California",
   previousBackground: "English teacher",
   className: "WEB21",
-  favSubjects: ["computer science", "philosophy", "English"]
+  favSubjects: ["computer science", "philosophy", "English"],
+  grade: 85
 });
+
+console.log("previousBackground: ", joscelyn.previousBackground);
+console.log("className: ", joscelyn.className);
+console.log("favSubjects: ", joscelyn.favSubjects);
+console.log("grade: ", joscelyn.grade);
+console.log("listsSubjects(): ");
+joscelyn.listsSubjects();
+console.log("PRAssignment(): ", joscelyn.PRAssignment("Javascript IV"));
+console.log("sprintChallenge(): ", joscelyn.sprintChallenge("Javascript"));
+console.log("graduate(): ", joscelyn.graduate());
 
 /*
 
@@ -186,6 +257,7 @@ class ProjectManager extends Instructor {
   }
 }
 
+// ProjectManager Object creation/invocations
 const brandon = new ProjectManager({
   name: "Brandon",
   age: 34,
@@ -196,6 +268,11 @@ const brandon = new ProjectManager({
   favLanguage: "JavaScript, C++, Python.",
   catchPhrase: "You shall not pass!"
 });
+
+console.log("gradClassName: ", brandon.gradClassName);
+console.log("favInstructor: ", brandon.favInstructor);
+console.log("standUp(): ", brandon.standUp("web21"));
+console.log("debugsCode(): ", brandon.debugsCode(kevin, "Javascript IV"));
 
 const mary = new ProjectManager({
   name: "Mary",
@@ -208,6 +285,11 @@ const mary = new ProjectManager({
   catchPhrase: "That looks AWESOME"
 });
 
+console.log("gradClassName: ", mary.gradClassName);
+console.log("favInstructor: ", mary.favInstructor);
+console.log("standUp(): ", mary.standUp("web21"));
+console.log("debugsCode(): ", mary.debugsCode(kevin, "Javascript IV"));
+
 const christian = new ProjectManager({
   name: "Christian",
   age: 32,
@@ -218,3 +300,8 @@ const christian = new ProjectManager({
   favLanguage: "JavaScript",
   catchPhrase: "Dont forget your daily commit."
 });
+
+console.log("gradClassName: ", christian.gradClassName);
+console.log("favInstructor: ", christian.favInstructor);
+console.log("standUp(): ", christian.standUp("web21"));
+console.log("debugsCode(): ", christian.debugsCode(kevin, "Javascript IV"));
